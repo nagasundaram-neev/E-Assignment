@@ -60,6 +60,11 @@
                         </li>
                     </ul>
                 <% end %>
+                 <div id="Others_Signup" style="display:none">
+                 <%= render :partial => 'devise/sessions/othersForm' %>
+                </div>
+                <button onclick="show()" class="btn btn-success">Register for another User ?</button>
+               
             </div>
             <!--/#register.form-action-->
             <div id="reset" class="form-action hide">
@@ -77,10 +82,21 @@
                         </li>
                     </ul>
                 <% end %>
+
             </div>
             <!--/#register.form-action-->
+
         </div>
     </div>
+
+<script type="text/javascript">
+function show()
+{
+var div=document.getElementById('Others_Signup');
+div.style.display="block"
+}
+</script>
+
 
 <style type="text/css">
 
